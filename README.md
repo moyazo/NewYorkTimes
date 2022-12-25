@@ -6,6 +6,6 @@ This repository will included
   - JavaScript
   - HTML
   - CSS 
-#  - FireBase
+  - FireBase
   - Api Conection(NYT Api)
   
