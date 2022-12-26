@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+}
+
+/* estilo body */
+body{
+    width: 100vw;
+    height: 150vh;
+    overflow-x: hidden;
+    }
+    
+/* DASHBOARD STYLE */
+    
+/* estilo container */
+#container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* NAVBAR STYLES */
+    
+#navbar{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+h3{
+    font-size: 1em;
+}
+
+#bocata{
+    width: 10%;
+    height: 50%;
+    background-color: transparent;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#slice1{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+}
+#slice2{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+}
+#slice3{
+    width: 100%;
+    height: 10%;
+    background-color: black;
+}
+
+#options{
+    width: 270%;
+    height: auto;
+    position: relative;
+    top: 150%;
+    border: 1px solid black;
+    background-color: white;
+}
+
+#imgNav{
+    width: 15%;
+}
