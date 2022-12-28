@@ -1,11 +1,12 @@
 *{
     margin: 0;
+    padding: 0;
 }
 
 /* estilo body */
 body{
     width: 100vw;
-    height: 150vh;
+    height: 100vh;
     overflow-x: hidden;
     }
     
@@ -14,63 +15,143 @@ body{
 /* estilo container */
 #container{
     width: 100%;
-    height: 100%;
+    height: auto;
+    background-color: rgba(128, 128, 128, 0.124);
     display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
 }
 
 /* NAVBAR STYLES */
     
 #navbar{
-    width: 100%;
-    height: 10%;
+    position: fixed;
+    left: -28%;
+    width: 30%;
+    height: 100%;
+    border-right: 1px solid black;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
+    flex-flow: column wrap;
+    justify-content: center;
     align-items: center;
-    border-bottom: 1px solid black;
-}
-h3{
-    font-size: 1em;
-}
-
-#bocata{
-    width: 10%;
-    height: 50%;
-    background-color: transparent;
-    display: flex;
-    flex-flow: column;
-    justify-content: space-between;
-    align-items: center;
-}
-
-#slice1{
-    width: 100%;
-    height: 10%;
-    background-color: black;
-}
-#slice2{
-    width: 100%;
-    height: 10%;
-    background-color: black;
-}
-#slice3{
-    width: 100%;
-    height: 10%;
-    background-color: black;
-}
-
-#options{
-    width: 270%;
-    height: auto;
-    position: relative;
-    top: 150%;
-    border: 1px solid black;
+    z-index: 10;
     background-color: white;
 }
 
-#imgNav{
-    width: 15%;
+#ntyI{
+    width: 50%;
 }
+
+#navbar:hover{
+    transform: translate(85%);
+    transition: .8s ease-in;
+}
+
+#navbar:not(:hover){
+    transform: translate(0%);
+    transition: 1s ease-in;
+}
+ul{
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+li{
+    font-size: .75em;
+    text-align: center;
+    border-bottom: 1px solid transparent;
+}
+
+li:hover{
+    cursor: pointer;
+    /* transition: .2s ease-in; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.332);
+    box-shadow: 0 .5em 1em -0.5em;
+}
+li:not(:hover){
+    transition: .2s ease-in;
+}
+
+
+
+/* CARDS STYLES */
+
+#content{
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: 5%;
+}
+
+#card{
+    align-items: center;
+    background-color: white;
+    border-radius: 1.5%;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+    box-shadow: 0em 0em 1.5em -.8em black;
+    display: flex;
+    flex-flow: column;
+    font-size: .9em;
+    height: 15em;
+    justify-content: space-evenly;
+    margin-bottom: 5%;
+    margin-left: 8%;
+    text-align: center;
+    width: 40%;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+    box-shadow: 0em .1em .5em -.25em black;
+    padding: 3%;
+    border-radius: 5%;
+    border: 1px solid rgba(0, 0, 0, 0.438);
+}
+
+#card:hover{
+    transform: scale(1.05);
+    transition: .8s ease-in-out;
+    
+}
+#card:not(:hover){
+    transform: scale(1);
+    transition: .8s ease-in-out;
+}
+@media (min-width: 764px){
+    #card{
+        width: 35%;
+        height: 15em;
+        font-size: 1.3em;
+        margin-left: 11%;
+        justify-content: space-evenly;
+    }
+    #navbar{
+        font-size: 1.7em;
+    }
+}
+
+@media (min-width: 1024px){
+    #card{
+        width: 28%;
+        height: 20em;
+        font-size: 2em;
+        margin-left: 4.5%;
+        flex-flow: column;
+    }
+    #navbar{
+        font-size: 2em;
+        width: 24.5%;
+        left: -24%;
+        padding-left: 2%;
+    }
+    #navbar:hover{
+        transform: translate(80%);
+        transition: .8s ease-in;
+    }
+}
+
