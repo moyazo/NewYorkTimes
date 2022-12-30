@@ -203,5 +203,14 @@ a{
         transform: translate(80%);
         transition: .8s ease-in;
     }
+    #title{
+        margin-left: 3%;
+    }
+    h1{
+        background-color: black;
+        color: white;
+        width: 30%;
+        font-size: 7em;
+    }
 }
 
