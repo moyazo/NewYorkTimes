@@ -75,3 +75,9 @@ const liOptions = document.querySelectorAll("li");
 liOptions[0].onclick = () => {
     location.replace("../index.html")
 }
+liOptions[1].onclick = () => {
+    location.replace("./dashboard.html")
+}
+liOptions[2].onclick = () => {
+    location.replace("./details.html")
+}
