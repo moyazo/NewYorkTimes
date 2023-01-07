@@ -1,6 +1,13 @@
+/* TIPOGRAPHY */
+@font-face {
+    font-family: newYork;
+    src: url("../Assets/NewYork.ttf");
+}
+
 *{
     margin: 0;
 }
+/* BODY STYLES */
 body{
     width: 100vw;
     height: 100vh;
@@ -11,6 +18,7 @@ body{
     background-size: cover;
     
 }
+/* CONTAINER STYLES */
 #container{
     width: 100%;
     height: 100%;
@@ -24,13 +32,14 @@ body{
     align-items: center;
     background-color: rgba(128, 128, 128, 0.642);
 }
-
+/* WELCOME MESSAGE */
 h1{
     width: 115%;
     text-align: center;
     font-size: 1.2em;
+    font-family: newYork;
+    letter-spacing: .2em;
 }
-
 
 a{
     text-decoration: none;
@@ -48,6 +57,8 @@ h1:not(:hover){
     transform: scale(1);
 }
 
+
+/* MEDIA QUERY */
 @media (max-width: 300px){
     h1{
         text-align: center;

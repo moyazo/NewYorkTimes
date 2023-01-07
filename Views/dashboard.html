@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Styles/dashboard.css">
-    <script defer src="../Services/dashboard.js"></script>
+    <script defer src="../Services/dashboard.js" type="module"></script>
     <title>DASHBOARD | NYT</title>
 </head>
 <body>
+    <!-- CONTAINER -->
     <div id="container">
-        <div id="navbar">
+        <div id="navbar"> <!-- NAVBAR CONTAINER -->
             <ul id="options">
-                <img id="ntyI" src="../Assets/NYT.png" alt="">
+                <img id="ntyI" src="../Assets/NYT.png" alt=""> <!-- LOGO NYT -->
                 <li class="option">WELCOME</li>
                 <li class="option">DASHBOARD</li>
                 <li class="option">DETAILS</li>
@@ -21,18 +22,16 @@
             </ul>
         </div>
 
-         <div id="info-container">
+         <div id="info-container"> <!-- INFO CONTAINER -->
             <div id="title">
-                <h2>New York Times <i>&reg;</i></h2>
+                <h2>New York Times <i>&reg;</i></h2> <!-- PAGE TITLE -->
                 <h1>Best Sellers</h1>
             </div>
             <hr>
-            <div id="content">
+            <div id="content"> <!-- BOOKS CARDS CONTAINER -->
                 
             </div>
-            
         </div> 
-        
     </div>
 </body>
 </html>

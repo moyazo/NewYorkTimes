@@ -1,0 +1,104 @@
+/* BODY STYLES */
+body{
+    /* overflow-x: hidden; */
+    height: 100vh;
+    width: 100vw;
+}
+
+    
+#navbar{
+    align-items: center;
+    background-color: white;
+    border-right: 1px solid black;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    justify-content: center;
+    left: -28%;
+    position: fixed;
+    width: 30%;
+    z-index: 10;
+}
+
+#ntyI{
+    width: 50%;
+}
+
+#navbar:hover{
+    transform: translate(85%);
+    transition: .8s ease-in;
+}
+
+#navbar:not(:hover){
+    transform: translate(0%);
+    transition: 1s ease-in;
+}
+
+#options{
+    position: relative;
+    left: -30%;
+}
+ul{
+    align-items: center;
+    display: flex;
+    flex-flow: column wrap;
+    height: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    width: 100%;
+}
+
+li{
+    border-bottom: 1px solid transparent;
+    font-size: .75em;
+    text-align: center;
+}
+
+li:hover{
+    /* transition: .2s ease-in; */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.332);
+    box-shadow: 0 .5em 1em -0.5em;
+    cursor: pointer;
+}
+li:not(:hover){
+    transition: .2s ease-in;
+}
+
+@media (min-width: 768px){
+
+    #navbar{
+        font-size: 1.7em;
+    }
+    
+    
+    #options{
+        left: -20%;
+    }
+    
+    #navbar:hover{
+        transform: translate(100%);
+        transition: .8s ease-in;
+    }
+    
+    #navbar:not(:hover){
+        transform: translate(0%);
+        transition: 1s ease-in;
+    }
+}
+    
+@media (min-width: 1024px){ 
+    
+        #navbar{
+            font-size: 2em;
+            width: 24.5%;
+            left: -26%;
+            padding-left: 2%;
+        }
+        #options{
+            left: -4%;
+        }
+        #navbar:hover{
+            transform: translate(80%);
+            transition: .8s ease-in;
+        }
+}

@@ -1,18 +1,18 @@
 "use strict"
 // API - RESPONSE
-const localStorageKey = "bookList";
+const localStorageKey = "bookList"; // NAME OF LOCALSTORAGE ITEM
 
-async function getData () {
-    const localStorageBooks = localStorage.getItem(localStorageKey);
+async function getData () { // ASYNC FUNCTION / NYT API
+    const localStorageBooks = localStorage.getItem(localStorageKey); // CHECK IF LOCALSTORAGE IS EMPTY
     let list = localStorageBooks ? JSON.parse(localStorageBooks) : [];
      
     if (!list || list.length === 0) {
     try {
-        const response = await fetch('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=FZi6T0tvXiCmPowsTGjVWaT4r0XgcVnw')
-        const data = await response.json()
+        const response = await fetch('https://api.nytimes.com/svc/books/v3/lists/names.json?api-key=FZi6T0tvXiCmPowsTGjVWaT4r0XgcVnw') // API CALL
+        const data = await response.json() // RETURN A PROMISE AS JSON ( OBJECT )
         const results = data.results
-        if (results && results.length >0){
-            localStorage.setItem(localStorageKey, JSON.stringify(results))
+        if (results && results.length > 0){
+            localStorage.setItem(localStorageKey, JSON.stringify(results)) // SET LIST BOOKS NAMES AT LOCALSTORAGE
             list = results
         }
         bool = true
@@ -25,13 +25,13 @@ async function getData () {
 return list
 }
 
-async function startApp() {
-    const booksData = await getData()
-booksData.forEach(result => {
+async function startApp() { // CREATE DOM FUNCTION
+    const booksData = await getData() // CALL TO API FUNCTION
+booksData.forEach(result => { // FOREACH BOOK GENRE 1 CARD
    
     const ourData = {name: result.list_name, old: result.oldest_published_date,new: result.newest_published_date, update: result.updated}
 
-
+    // DOM STRUCTURE
     const cardELEM = document.createElement("div")
     cardELEM.setAttribute("id","card");
     const h4ELEM = document.createElement("h4")
@@ -60,7 +60,6 @@ booksData.forEach(result => {
     
     linkELEM.onclick = () => {
         localStorage.setItem("bookGenre", h4ELEM.textContent)
-       
     }
 
 });
@@ -80,4 +79,12 @@ liOptions[1].onclick = () => {
 }
 liOptions[2].onclick = () => {
     location.replace("./details.html")
+}
+
+if(localStorage.getItem("user")){
+    liOptions[3].innerText = "LOG OUT"
+}
+
+liOptions[3].onclick = async () => {
+    location.replace("./login.html")
 }

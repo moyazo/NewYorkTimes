@@ -1,39 +1,45 @@
+@font-face {
+    font-family: newYork;
+    src: url("../Assets/NewYork.ttf");
+}
+
 *{
+    font-family: newYork;
+    letter-spacing: .2em;
     margin: 0;
     padding: 0;
 }
 
-/* estilo body */
+/* BODY STYLES */
 body{
-    width: 100vw;
-    height: 100vh;
     /* overflow-x: hidden; */
+    height: 100vh;
+    width: 100vw;
 }
     
-/* DASHBOARD STYLE */
+/* DASHBOARD STYLES */
     
-/* estilo container */
+/* CONTAINER STYLES */
 #container{
-    width: 100%;
-    height: auto;
-    background-color: rgba(128, 128, 128, 0.124);
     display: flex;
+    height: auto;
+    width: 100%;
 }
 
 /* NAVBAR STYLES */
     
 #navbar{
-    position: fixed;
-    left: -28%;
-    width: 30%;
-    height: 100%;
+    align-items: center;
+    background-color: white;
     border-right: 1px solid black;
     display: flex;
     flex-flow: column wrap;
+    height: 100%;
     justify-content: center;
-    align-items: center;
+    left: -28%;
+    position: fixed;
+    width: 30%;
     z-index: 10;
-    background-color: white;
 }
 
 #ntyI{
@@ -50,26 +56,26 @@ body{
     transition: 1s ease-in;
 }
 ul{
-    width: 100%;
-    height: 100%;
-    list-style: none;
+    align-items: center;
     display: flex;
     flex-flow: column wrap;
+    height: 100%;
     justify-content: space-evenly;
-    align-items: center;
+    list-style: none;
+    width: 100%;
 }
 
 li{
+    border-bottom: 1px solid transparent;
     font-size: .75em;
     text-align: center;
-    border-bottom: 1px solid transparent;
 }
 
 li:hover{
-    cursor: pointer;
     /* transition: .2s ease-in; */
     border-bottom: 1px solid rgba(0, 0, 0, 0.332);
     box-shadow: 0 .5em 1em -0.5em;
+    cursor: pointer;
 }
 li:not(:hover){
     transition: .2s ease-in;
@@ -83,8 +89,10 @@ li:not(:hover){
 h1{
     background-color: black;
     color: white;
-    width: 60%;
+    font-family: newYork;
     font-size: 2.7em;
+    letter-spacing: .2em;
+    width: 60%;
 }
 
 
@@ -106,7 +114,7 @@ h1{
     display: flex;
     flex-flow: column;
     font-size: .9em;
-    height: 12em;
+    height: 15em;
     justify-content: space-around;
     margin-bottom: 5%;
     margin-left: 7%;
@@ -115,12 +123,14 @@ h1{
 }
 
 h4{
-    border-bottom: 1px solid black;
     background-color: black;
-    color: wheat;
-    width: 90%;
-    padding: 5% 0;
+    border-bottom: 1px solid black;
     box-shadow: 0 1em .5em -.9em black;
+    color: wheat;
+    font-family: newYork;
+    letter-spacing: .2em;
+    padding: 5% 0;
+    width: 90%;
 }
 p:hover{
     background-color: rgba(0, 0, 0, 0.332);
@@ -128,12 +138,12 @@ p:hover{
 
 
 a{
-    text-decoration: none;
-    color: black;
-    box-shadow: 0em .1em .5em -.25em black;
-    padding: 3%;
     border-radius: 5%;
     border: 1px solid rgba(0, 0, 0, 0.438);
+    box-shadow: 0em .1em .5em -.25em black;
+    color: black;
+    padding: 3%;
+    text-decoration: none;
 }
 
 #card:hover{
@@ -153,11 +163,11 @@ a{
         margin-top: 5%;
     }
     #card{
-        width: 80%;
-        height: 12em;
         font-size: 1.3em;
-        margin-left: 7%;
+        height: 12em;
         justify-content: space-evenly;
+        margin-left: 7%;
+        width: 80%;
     }
     #navbar{
         font-size: 1.7em;
@@ -165,8 +175,8 @@ a{
     h1{
         background-color: black;
         color: white;
-        width: 55%;
         font-size: 5em;
+        width: 55%;
     }
 }
 
@@ -177,27 +187,27 @@ a{
 
     }
     #card{
-        width: 80%;
-        height: 12em;
-        font-size: 2em;
         flex-flow: column;
-        padding: 2%;
+        font-size: 2em;
+        height: 12em;
         margin-right: 4%;
+        padding: 2%;
+        width: 80%;
     }
 
     h4{
-        border-bottom: 1px solid black;
         background-color: black;
-        color: wheat;
-        width: 100%;
-        padding: 5% 0;
+        border-bottom: 1px solid black;
         box-shadow: 0 1em .5em -.9em black;
+        color: wheat;
+        padding: 5% 0;
+        width: 100%;
     }
     #navbar{
         font-size: 2em;
-        width: 24.5%;
         left: -26%;
         padding-left: 2%;
+        width: 24.5%;
     }
     #navbar:hover{
         transform: translate(80%);
@@ -209,8 +219,8 @@ a{
     h1{
         background-color: black;
         color: white;
-        width: 30%;
         font-size: 7em;
+        width: 30%;
     }
 }
 

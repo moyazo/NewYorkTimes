@@ -97,6 +97,22 @@ option3.onclick = () => {
 }
 const option4 = document.querySelector(".option4")
 option4.onclick = () => {
-    location.replace("../details.html")
+    location.replace("./login.html")
+}
+
+// LOADER 
+
+window.onload = () =>{
+    const loader = document.getElementById("loader")
+    const container = document.getElementById("container")
+    let aux = 0
+    let idInterval = setInterval(() => {
+        aux++
+        if(aux === 2){
+            loader.style.display = "none"
+            clearInterval(idInterval)
+        }
+    },500)
+    container.style.display = "flex"
 }
 

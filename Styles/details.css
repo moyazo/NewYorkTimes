@@ -1,3 +1,12 @@
+/* TIPOGRAPHY */
+@font-face {
+    font-family: newYork;
+    src: url("../Assets/NewYork.ttf");
+}
+*{
+    font-family: newYork;
+    letter-spacing: .2em;
+}
 /* BODY STYLES */
 body{
     background-color: rgba(128, 128, 128, 0.124);
@@ -7,7 +16,7 @@ body{
 }
 /* CONTAINER STYLES */
 #container{
-    display: flex;
+    display: none;
     flex-flow: column;
     height: auto;
     width: 100%;
@@ -151,6 +160,22 @@ h1{
 }
 
 
+/* LOADER */
+
+#loader{
+    width: 98vw;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loaderIMG{
+    width: 15%;
+    height:18%;
+}
+
+
 @media (min-width: 768px){
 #textDetail{
     width: 90%;
@@ -215,9 +240,9 @@ h1{
 
 @media (min-width: 1024px){ 
 
-    #textDetail{
-        width: 100%;
-    }
+#textDetail{
+     width: 100%;
+}
 .detail{
     height: 40em;
 }
