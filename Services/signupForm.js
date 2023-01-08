@@ -11,6 +11,10 @@ signUpForm.addEventListener("submit", async (e) => {
 
   try {
     const userCredential = await createUserWithEmailAndPassword(auth, email, password)
+    /**
+     * Corrección
+     * Console.log sobra
+     */
     console.log(userCredential)
 
     // Close the signup modal

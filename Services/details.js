@@ -8,6 +8,10 @@ async function getData2 () {
         const response = await fetch(`https://api.nytimes.com/svc/books/v3/lists/${localStorage.getItem(localStorageKey)}.json?api-key=FZi6T0tvXiCmPowsTGjVWaT4r0XgcVnw`)
         const data = await response.json()
         const results = data.results.books
+        /**
+         * Corrección
+         * Debemos eliminar estos comentarios
+         */
         // if (results && results.length >0){
         //     localStorage.setItem(localStorageKey, JSON.stringify(results))
         //     list = results
