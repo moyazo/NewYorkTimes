@@ -1,4 +1,8 @@
 import { onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-auth.js"
+/**
+ * Corrección
+ * import sobra
+ */
 import { getDocs, collection } from "https://www.gstatic.com/firebasejs/9.10.0/firebase-firestore.js"
 import { auth } from "./Services/firebase.js";
 import { loginCheck } from "./Services/loginCheck.js";;

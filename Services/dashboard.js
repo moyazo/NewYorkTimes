@@ -15,6 +15,10 @@ async function getData () { // ASYNC FUNCTION / NYT API
             localStorage.setItem(localStorageKey, JSON.stringify(results)) // SET LIST BOOKS NAMES AT LOCALSTORAGE
             list = results
         }
+        /**
+         * Corrección
+         * bool es una variable que no existe
+         */
         bool = true
     }
     catch (error) {
