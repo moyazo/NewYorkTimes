@@ -189,7 +189,7 @@ a{
     #card{
         flex-flow: column;
         font-size: 2em;
-        height: 12em;
+        height: 15em;
         margin-right: 4%;
         padding: 2%;
         width: 80%;
@@ -220,7 +220,7 @@ a{
         background-color: black;
         color: white;
         font-size: 7em;
-        width: 30%;
+        width: 50%;
     }
 }
 
